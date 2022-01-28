@@ -1,0 +1,91 @@
+head
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+  title EmergencyCard Home
+  
+  link(rel='apple-touch-icon' sizes='180x180' href='/public/images/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='/public/images/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='/public/images/favicon-16x16.png')
+  link(rel='manifest' href='/public/images/site.webmanifest')
+  link(rel='mask-icon' href='/public/images/safari-pinned-tab.svg' color='#5bbad5')
+  link(rel='shortcut icon' href='/public/images/favicon.ico')
+  meta(name='msapplication-TileColor' content='#da532c')
+  meta(name='msapplication-config' content='/public/images/browserconfig.xml')
+  meta(name='theme-color' content='#ffffff')
+  
+  link(rel='manifest' href='manifest.json')
+  // ios support
+  link(rel='apple-touch-icon' href='images/icons/icon-72x72.png')
+  link(rel='apple-touch-icon' href='images/icons/icon-96x96.png')
+  link(rel='apple-touch-icon' href='images/icons/icon-128x128.png')
+  link(rel='apple-touch-icon' href='images/icons/icon-144x144.png')
+  link(rel='apple-touch-icon' href='images/icons/icon-152x152.png')
+  link(rel='apple-touch-icon' href='images/icons/icon-192x192.png')
+  link(rel='apple-touch-icon' href='images/icons/icon-384x384.png')
+  link(rel='apple-touch-icon' href='images/icons/icon-512x512.png')
+  meta(name='apple-mobile-web-app-status-bar' content='#db4938')
+  meta(name='theme-color' content='#db4938')
+
+  
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-888FGYR7LX');
+
+  style.
+    @media only screen and (min-width: 1000px) {
+      .responsive {
+        width:45vw;
+      }
+    }
+// Navigation
+nav.navbar.navbar-expand-lg.navbar-light.static-top
+  .container
+    a.navbar-brand(href='/')
+      img(src='../public/images/logo.jpg' alt='Logo' style='width:180px;')
+    button.navbar-toggler.collapsed(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarResponsive.navbar-collapse.collapse(style='')
+      ul.navbar-nav.ml-auto
+        li.nav-item.active
+          a.nav-link(href='/')
+            | Home
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='/create') | Create Card
+        li.nav-item
+          a.nav-link(href='https://homepage-appsplosion.herokuapp.com/privacypolicy' target="_blank") | Privacy Policy
+
+div(style='height:1px;background-color:RGB(237, 237, 237);')
+
+div(class="responsive" style="margin: 0 auto;") 
+  div(style="width:80%;margin: auto; margin-top:2vh;")
+
+      p.lead.font-weight-normal
+          | What is <b>EmergencyCard</b>?
+      p.lead.font-weight-small
+          | In the event of an emergency, information about a person is often needed quickly. With EmergencyCard, you can compile information for friends and acquaintances that is useful in an emergency.
+      a.btn.btn-outline-primary(href='/example' style="width:100%; margin-bottom:5vh;") Show example card
+
+      p.lead.font-weight-normal
+          | Create your card
+      p.lead.font-weight-small
+          | On the next page you will get a form to fill in. Then you’ll get a private link to your information to share.
+
+      center
+        a.btn.btn-primary(href='/create' style="width:100%; margin-bottom:5vh;") Create card
+        
+
+
+
+
+script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')
+
+
+
+
+    
+

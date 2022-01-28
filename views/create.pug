@@ -1,0 +1,117 @@
+head
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+  title Home | help-uninformed-humans
+  
+  link(rel='apple-touch-icon' sizes='180x180' href='/public/images/apple-touch-icon.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='/public/images/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='/public/images/favicon-16x16.png')
+  link(rel='manifest' href='/public/images/site.webmanifest')
+  link(rel='mask-icon' href='/public/images/safari-pinned-tab.svg' color='#5bbad5')
+  link(rel='shortcut icon' href='/public/images/favicon.ico')
+  meta(name='msapplication-TileColor' content='#da532c')
+  meta(name='msapplication-config' content='/public/images/browserconfig.xml')
+  meta(name='theme-color' content='#ffffff')
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-888FGYR7LX');
+
+  style.
+    @media only screen and (min-width: 1000px) {
+      .responsive {
+        width:45vw;
+      }
+    }
+// Navigation
+nav.navbar.navbar-expand-lg.navbar-light.static-top
+  .container
+    a.navbar-brand(href='/')
+      img(src='../public/images/logo.jpg' alt='Logo' style='width:180px;')
+    button.navbar-toggler.collapsed(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarResponsive.navbar-collapse.collapse(style='')
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a.nav-link(href='/')
+            | Home
+            span.sr-only (current)
+        li.nav-item.active
+          a.nav-link(href='/create') | Create Card
+        li.nav-item
+          a.nav-link(href='https://homepage-appsplosion.herokuapp.com/privacypolicy' target="_blank") | Privacy Policy
+
+div(style='height:1px;background-color:RGB(237, 237, 237);')
+
+div(class="responsive" style="margin: 0 auto;")
+  div(style="width:80%;margin: auto; margin-top:2vh;")
+    p.lead.font-weight-normal
+        | Create your <b>EmergencyCard</b>
+    p.lead.font-weight-small
+        | Enter the information about yourself, then share it with others.
+        
+    
+    form(action="/create" method="post")
+        .form-group
+            label(for='exampleFormControlInput1') Name
+            input#exampleFormControlInput1.form-control(name="name" type='text' placeholder='full name' required)
+            .form-group
+            label(for='exampleFormControlSelect1') Sex
+            select#exampleFormControlSelect1.form-control(name="sex")
+                option male
+                option female
+            label.col-2.col-form-label(for='example-date-input') Date of birth
+            .col-8
+              input#example-date-input.form-control(name="borndate" type='date' value='2000-01-01')
+
+                        
+            label(for='exampleFormControlInput1') Address
+            input#exampleFormControlInput1.form-control(name="address" type='text' placeholder='address with house number')
+            .form-group
+            label(for='exampleFormControlInput1') Phone
+            input#exampleFormControlInput1.form-control(name="number" type='text' placeholder='')
+            .form-group
+            label(for='exampleFormControlInput1') Emergency contact 
+            input#exampleFormControlInput1.form-control(name="enumber" type='text' placeholder='Nummer oder Mail etc.')
+            .form-group
+            
+        .form-group
+            label(for='exampleFormControlSelect1') Bloodtype
+            select#exampleFormControlSelect1.form-control(name="bloodtype")
+                option unknown
+                option AB
+                option B
+                option A
+                option 0
+        .form-group
+            label(for='exampleFormControlSelect2') Pre-existing diseases
+            select#exampleFormControlSelect2.form-control(name="previousillness" multiple='')
+                option Diabetes
+                option Astma
+                option high blood pressure
+                option Heart disease
+                option Cancer
+        .form-group
+            label(for='exampleFormControlTextarea1') Additional Information:
+            textarea#exampleFormControlTextarea1.form-control( rows='3' name="extratext")
+        .alert.alert-warning(role='alert')
+          | Only people with the generated link can access your information.
+        center
+            input(style="width:100%; height:8vh; margin-bottom:6vh;").btn.btn-primary(type='submit' value='Save & Share')
+
+
+
+
+
+
+
+script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')
+
+
+
+
+    
+
